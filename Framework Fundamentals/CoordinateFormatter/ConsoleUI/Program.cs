@@ -10,6 +10,11 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("Insert coordinate X: ");
+            var XStringFormat = Console.ReadLine();
+
+
         }
     }
 }
