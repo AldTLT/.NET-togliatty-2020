@@ -61,29 +61,56 @@ namespace ConsoleUI {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please insert coordinate X: .
+        ///   Looks up a localized string similar to CorrectCoordinate: 12.45,7.988.
         /// </summary>
-        internal static string CoordinateXIntro {
+        internal static string CorrectCoordinateFormat {
             get {
-                return ResourceManager.GetString("CoordinateXIntro", resourceCulture);
+                return ResourceManager.GetString("CorrectCoordinateFormat", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please insert coordinate Y: .
+        ///   Looks up a localized string similar to Please enter coordinate X,Y or insert file name to redirect input data. .
         /// </summary>
-        internal static string CoordinateYIntro {
+        internal static string EnterData {
             get {
-                return ResourceManager.GetString("CoordinateYIntro", resourceCulture);
+                return ResourceManager.GetString("EnterData", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coordinate entered incorrectly!.
+        ///   Looks up a localized string similar to File not found!.
+        /// </summary>
+        internal static string FileNotFound {
+            get {
+                return ResourceManager.GetString("FileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data entered incorrectly!.
         /// </summary>
         internal static string IncorrectlyInsert {
             get {
                 return ResourceManager.GetString("IncorrectlyInsert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coordinate Formatter.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsupported coordinate format.
+        /// </summary>
+        internal static string WrongCoordFormat {
+            get {
+                return ResourceManager.GetString("WrongCoordFormat", resourceCulture);
             }
         }
     }

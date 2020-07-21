@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CoordinateFormatter
+﻿namespace CoordinateFormatter
 {
     /// <summary>
     /// The class represents coordinates X and Y.

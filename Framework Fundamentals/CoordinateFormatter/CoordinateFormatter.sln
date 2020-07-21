@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateFormatter", "CoordinateFormatter\CoordinateFormatter.csproj", "{216BCE50-968A-4F57-B827-DD8BF8F532BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateFormatter.Test", "CoordinateFormatter.Test\CoordinateFormatter.Test.csproj", "{0C57037D-44B9-4467-9608-056995B41E49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{216BCE50-968A-4F57-B827-DD8BF8F532BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{216BCE50-968A-4F57-B827-DD8BF8F532BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{216BCE50-968A-4F57-B827-DD8BF8F532BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C57037D-44B9-4467-9608-056995B41E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C57037D-44B9-4467-9608-056995B41E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C57037D-44B9-4467-9608-056995B41E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C57037D-44B9-4467-9608-056995B41E49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

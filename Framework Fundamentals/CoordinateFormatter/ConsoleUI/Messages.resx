@@ -117,16 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CoordinateXIntro" xml:space="preserve">
-    <value>Please insert coordinate X: </value>
-    <comment>Insert coordinate X intro.</comment>
+  <data name="CorrectCoordinateFormat" xml:space="preserve">
+    <value>CorrectCoordinate: 12.45,7.988</value>
+    <comment>Example of correct coordinate format.</comment>
   </data>
-  <data name="CoordinateYIntro" xml:space="preserve">
-    <value>Please insert coordinate Y: </value>
-    <comment>Insert coordinate Y intro.</comment>
+  <data name="EnterData" xml:space="preserve">
+    <value>Please enter coordinate X,Y or insert file name to redirect input data. </value>
+    <comment>Message to insert coordinates to convert or file name.</comment>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File not found!</value>
+    <comment>File to redirect not found.</comment>
   </data>
   <data name="IncorrectlyInsert" xml:space="preserve">
-    <value>Coordinate entered incorrectly!</value>
+    <value>Data entered incorrectly!</value>
     <comment>Coordinates inserted incorrectly, parse error.</comment>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Coordinate Formatter</value>
+    <comment>Title message. Name of the application.</comment>
+  </data>
+  <data name="WrongCoordFormat" xml:space="preserve">
+    <value>Unsupported coordinate format</value>
+    <comment>This format of coordinates not correct.</comment>
   </data>
 </root>
