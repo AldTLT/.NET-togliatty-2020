@@ -34,5 +34,32 @@
         {
             return $"X: {this.X} Y: {this.Y}";
         }
+
+        /// <summary>
+        /// Determines whether this instance and another specified Coordinate object have the same value.
+        /// </summary>
+        /// <param name="coordinate">The Coordinate object to compare to this instance.</param>
+        /// <returns>True if object is Coordinate and the value X and Y of is the same as the value of this instance;
+        /// otherwise, false. If value is null, the method returns false.</returns>
+        public override bool Equals(object coordinate)
+        {
+            if (coordinate == null || GetType() != coordinate.GetType())
+            {
+                return false;
+            }
+
+            var coordinateToEqual = coordinate as Coordinate;
+
+            return (X == coordinateToEqual.X) && (Y == coordinateToEqual.Y);
+        }
+
+        /// <summary>
+        /// Returns the hash code for this coordinate instance.
+        /// </summary>
+        /// <returns>A 32-bit signed integer hash code.</returns>
+        public override int GetHashCode()
+        {
+            return this.ToString().GetHashCode();
+        }
     }
 }
