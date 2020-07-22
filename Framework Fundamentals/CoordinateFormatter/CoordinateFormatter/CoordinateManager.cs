@@ -19,7 +19,9 @@ namespace CoordinateFormatter
         /// <returns>True if s was converted successfully; otherwise, false.</returns>
         public static bool TryParse(string coordinateToConvert, out Coordinate coordinate)
         {
-            if (string.IsNullOrEmpty(coordinateToConvert))
+            var isCoordinates = IsCoordinates(coordinateToConvert);
+
+            if (string.IsNullOrEmpty(coordinateToConvert) || !isCoordinates)
             {
                 coordinate = null;
                 return false;
