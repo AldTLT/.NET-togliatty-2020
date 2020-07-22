@@ -88,6 +88,15 @@ namespace ConsoleUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The file is to big. Max size is:.
+        /// </summary>
+        internal static string FileTooBig {
+            get {
+                return ResourceManager.GetString("FileTooBig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Data entered incorrectly!.
         /// </summary>
         internal static string IncorrectlyInsert {

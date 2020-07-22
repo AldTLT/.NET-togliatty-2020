@@ -129,6 +129,10 @@
     <value>File not found!</value>
     <comment>File to redirect not found.</comment>
   </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>The file is to big. Max size is:</value>
+    <comment>The file from which data input can be redirected has too big size.</comment>
+  </data>
   <data name="IncorrectlyInsert" xml:space="preserve">
     <value>Data entered incorrectly!</value>
     <comment>Coordinates inserted incorrectly, parse error.</comment>

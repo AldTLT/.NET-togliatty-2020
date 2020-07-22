@@ -10,17 +10,18 @@ namespace ConsoleUI
     class Program
     {
         /// <summary>
+        /// The maximum file size in bytes from which data input can be redirected. The size is selected arbitrarily.
+        /// </summary>
+        const long MAX_FILE_SIZE = 10000;
+
+        /// <summary>
         /// Main method.
         /// </summary>
         static void Main()
         {
-
             string inputData;
             bool isInputDataCoordinates;
             bool isInputDataFileName;
-
-            // Show intro messages.
-            Console.WriteLine(Messages.Title);
 
             // Repeating until the correct value is entered.
             do
@@ -31,7 +32,9 @@ namespace ConsoleUI
                 Console.Write(Messages.EnterData);
 
                 inputData = Console.ReadLine();
+                // Check if a input data is coordinate.
                 isInputDataCoordinates = CoordinateManager.IsCoordinates(inputData);
+                // Check if a input data is file name.
                 isInputDataFileName = CoordinateManager.IsFileName(inputData);
 
                 if (isInputDataCoordinates || isInputDataFileName)
@@ -47,7 +50,15 @@ namespace ConsoleUI
             // If file name entered - redirect input from file.
             if (isInputDataFileName)
             {
-                RedirectInputFromFile(inputData);
+                var fileSize = FileManager.GetFileSize(inputData);
+                if (fileSize > MAX_FILE_SIZE)
+                {
+                    Console.WriteLine($"{Messages.FileTooBig} {MAX_FILE_SIZE} bytes.");
+                }
+                else
+                {
+                    FileManager.RedirectInputFromFile(inputData);
+                }
             }
 
             // If coordinates entered - input from console.
@@ -63,47 +74,6 @@ namespace ConsoleUI
             var standardInput = new StreamReader(Console.OpenStandardInput());
             Console.SetIn(standardInput);
             Console.ReadLine();
-        }
-
-        /// <summary>
-        /// The method redirect input from file and display formatted data on the console.
-        /// If file not exists, display message.
-        /// </summary>
-        /// <param name="fileName">Name of the file from which the redirection is made.</param>
-        static void RedirectInputFromFile(string fileName)
-        {
-            var isFileExist = File.Exists(fileName);
-
-            if (!isFileExist)
-            {
-                Console.WriteLine(Messages.FileNotFound);
-                return;
-            }
-
-            // Create custom reader from file.
-            using (var fileReader = new StreamReader(fileName))
-            {
-                Console.SetIn(fileReader);
-                do
-                {
-                    var coordinates = Console.ReadLine();
-
-                    if (string.IsNullOrEmpty(coordinates))
-                    {
-                        break;
-                    }
-
-                    var parseResult = CoordinateManager.TryParse(coordinates, out Coordinate coordinate);
-
-                    if (!parseResult)
-                    {
-                        Console.WriteLine(Messages.WrongCoordFormat);
-                    }
-
-                    Console.WriteLine(coordinate.ToString());
-                }
-                while (true);
-            }
         }
     }
 }
