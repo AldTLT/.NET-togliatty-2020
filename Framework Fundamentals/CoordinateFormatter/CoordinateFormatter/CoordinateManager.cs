@@ -29,15 +29,22 @@ namespace CoordinateFormatter
 
             var coordinatesArray = coordinateToConvert.Split(',').Select((coordString) =>
             {
-                var parseResult = double.TryParse(coordString, NumberStyles.AllowDecimalPoint, culture, out double coordDouble);
+                var parseResult = double.TryParse
+                (
+                    coordString,
+                    NumberStyles.AllowDecimalPoint | NumberStyles.AllowLeadingSign,
+                    culture,
+                    out double coordDouble
+                    );
+
                 return parseResult ? coordDouble : double.NaN;
             }).ToArray();
 
-            // Number of coordinates - 2, - X and Y.
+            // Number of coordinates = 2, X and Y.
             const int numberOfCoordinates = 2;
 
             // If parse failed - coordinate sets null, and returns false.
-            if (coordinatesArray.Length != numberOfCoordinates)
+            if (coordinatesArray.Length != numberOfCoordinates || coordinatesArray.Contains(double.NaN))
             {
                 coordinate = null;
                 return false;
