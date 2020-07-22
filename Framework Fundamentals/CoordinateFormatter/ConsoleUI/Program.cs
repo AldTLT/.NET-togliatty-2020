@@ -1,6 +1,5 @@
 ﻿using CoordinateFormatter;
 using System;
-using System.IO;
 
 namespace ConsoleUI
 {
@@ -10,69 +9,47 @@ namespace ConsoleUI
     class Program
     {
         /// <summary>
-        /// The maximum file size in bytes from which data input can be redirected. The size is selected arbitrarily.
+        /// The maximum number of coordinates to print. The number is selected arbitrarily.
         /// </summary>
-        const long MAX_FILE_SIZE = 10000;
+        const int MAX_COORD_NUMBER = 100;
 
         /// <summary>
         /// Main method.
         /// </summary>
         static void Main()
         {
-            string inputData;
-            bool isInputDataCoordinates;
-            bool isInputDataFileName;
+            var isInputRedirected = Console.IsInputRedirected;
+            // Count of coordinates to print. Initial value.
+            var coordCount = 0;
 
-            // Repeating until the correct value is entered.
+            // Show intro messages.
+            Console.Clear();
+            Console.WriteLine(Messages.Title);
+            Console.WriteLine(Messages.EnterData);
+
             do
             {
-                Console.Clear();
-                // Show intro messages.
-                Console.WriteLine(Messages.Title);
-                Console.Write(Messages.EnterData);
+                var inputData = Console.ReadLine();
 
-                inputData = Console.ReadLine();
-                // Check if a input data is coordinate.
-                isInputDataCoordinates = CoordinateManager.IsCoordinates(inputData);
-                // Check if a input data is file name.
-                isInputDataFileName = CoordinateManager.IsFileName(inputData);
-
-                if (isInputDataCoordinates || isInputDataFileName)
+                if (inputData == null || coordCount > MAX_COORD_NUMBER)
                 {
                     break;
                 }
 
-                Console.WriteLine(Messages.IncorrectlyInsert);
-                Console.ReadKey();
-            }
-            while (true);
-
-            // If file name entered - redirect input from file.
-            if (isInputDataFileName)
-            {
-                var fileSize = FileManager.GetFileSize(inputData);
-                if (fileSize > MAX_FILE_SIZE)
-                {
-                    Console.WriteLine($"{Messages.FileTooBig} {MAX_FILE_SIZE} bytes.");
-                }
-                else
-                {
-                    FileManager.RedirectInputFromFile(inputData);
-                }
-            }
-
-            // If coordinates entered - input from console.
-            if (isInputDataCoordinates)
-            {
                 var parseResult = CoordinateManager.TryParse(inputData, out Coordinate coordinate);
-                var messageToInput = parseResult ? coordinate.ToString() : Messages.WrongCoordFormat;
+                var messageToInput = parseResult ? coordinate.ToString() : Messages.WrongCoordinate;
+                coordCount++;
 
                 Console.WriteLine(messageToInput);
-            }           
 
-            // Create standard reader from console.
-            var standardInput = new StreamReader(Console.OpenStandardInput());
-            Console.SetIn(standardInput);
+                if (!isInputRedirected)
+                {
+                    break;
+                }
+            }
+
+            while (true);
+
             Console.ReadLine();
         }
     }
