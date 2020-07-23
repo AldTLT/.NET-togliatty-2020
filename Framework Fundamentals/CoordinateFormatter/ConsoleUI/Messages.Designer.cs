@@ -70,6 +70,33 @@ namespace ConsoleUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File not found!.
+        /// </summary>
+        internal static string FileNotFound {
+            get {
+                return ResourceManager.GetString("FileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The file is to big. Max size is:.
+        /// </summary>
+        internal static string FileTooBig {
+            get {
+                return ResourceManager.GetString("FileTooBig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data entered incorrectly!.
+        /// </summary>
+        internal static string IncorrectlyInsert {
+            get {
+                return ResourceManager.GetString("IncorrectlyInsert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to COORDINATE FORMATTER.
         /// </summary>
         internal static string Title {
@@ -79,11 +106,11 @@ namespace ConsoleUI {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wrong coordinate!.
+        ///   Looks up a localized string similar to Unsupported coordinate format.
         /// </summary>
-        internal static string WrongCoordinate {
+        internal static string WrongCoordFormat {
             get {
-                return ResourceManager.GetString("WrongCoordinate", resourceCulture);
+                return ResourceManager.GetString("WrongCoordFormat", resourceCulture);
             }
         }
     }
