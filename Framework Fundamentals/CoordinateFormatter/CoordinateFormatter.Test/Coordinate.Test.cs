@@ -9,15 +9,29 @@ namespace CoordinateFormatter.Test
     public class CoordinateTest
     {
         /// <summary>
+        /// A coordinate instance to test.
+        /// </summary>
+        private Coordinate _coordinate;
+
+        /// <summary>
+        /// The method initializes a new coordinate.
+        /// </summary>
+        [TestInitialize]
+        public void InitializeCoordinate()
+        {
+            _coordinate = new Coordinate(-43.6644, 9985.44);
+        }
+
+        /// <summary>
         /// Test ToString method of Coordinate.
         /// </summary>
         [TestMethod]
         public void ToStringTest()
         {
-            var coordinate = new Coordinate(-43.6644, 9985.44);
+
             var expectedString = "X: -43,6644 Y: 9985,44";
 
-            Assert.AreEqual(expectedString, coordinate.ToString());
+            Assert.AreEqual(expectedString, _coordinate.ToString());
         }
 
         /// <summary>
@@ -26,12 +40,10 @@ namespace CoordinateFormatter.Test
         [TestMethod]
         public void EqualsTrueTest()
         {
-            // The first coordinate to equal.
-            var coordinate1 = new Coordinate(+76.433, -6.7544);
-            // The second coordinate to equal.
-            var coordinate2 = new Coordinate(+76.433, -6.7544);
+            // Coordinate to equal.
+            var coordinate = new Coordinate(-43.6644, +9985.44);
 
-            Assert.IsTrue(coordinate1.Equals(coordinate2));
+            Assert.IsTrue(coordinate.Equals(_coordinate));
         }
 
         /// <summary>
@@ -40,12 +52,10 @@ namespace CoordinateFormatter.Test
         [TestMethod]
         public void EqualsFalseTest()
         {
-            // The first coordinate to equal.
-            var coordinate1 = new Coordinate(+76.433, -6.7544);
-            // The second coordinate to equal.
-            var coordinate2 = new Coordinate(+76.433, 6.7544);
+            // Coordinate to equal.
+            var coordinate = new Coordinate(43.6644, 9985.44);
 
-            Assert.IsFalse(coordinate1.Equals(coordinate2));
+            Assert.IsFalse(coordinate.Equals(_coordinate));
         }
     }
 }
