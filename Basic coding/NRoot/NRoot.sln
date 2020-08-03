@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRoot.ConsoleUI", "NRoot.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRoot.Calculation", "NRoot.Calculation\NRoot.Calculation.csproj", "{69D2336D-7A2B-4162-A9AD-2DFAFB49060C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRoot.Calculation.Test", "NRoot.Calculation.Test\NRoot.Calculation.Test.csproj", "{B36D36A7-7F46-4FF3-97E7-DA6FAE45580A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRootCalculation.Test", "NRoot.Calculation.Test\NRootCalculation.Test.csproj", "{B36D36A7-7F46-4FF3-97E7-DA6FAE45580A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

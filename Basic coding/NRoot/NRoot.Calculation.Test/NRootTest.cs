@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NRoot.Calculation;
 
-namespace NRoot.Calculation.Test
+namespace NRootCalculation.Test
 {
     /// <summary>
     /// The class represents test of N-root calculation class.
