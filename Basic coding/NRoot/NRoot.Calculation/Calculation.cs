@@ -24,9 +24,8 @@ namespace NRoot.Calculation
         public static double GetNRoot(this double number, double root, double accuracy)
         {
             if (accuracy <= 0
-                || root == 0
-                || (root % 2 == 0 && number < 0)
-                || (number % 2 == 0 && root < 0))
+                || root <= 0
+                || (root % 2 == 0 && number < 0))
             {
                 return double.NaN;
             }
