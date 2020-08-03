@@ -56,7 +56,7 @@ namespace NRoot.Calculation
         /// </summary>
         /// <param name="accuracy">Source accuracy.</param>
         /// <returns>Number of decimal places after point.</returns>
-        private static int GetDecimalPlace(double accuracy)
+        public static int GetDecimalPlace(double accuracy)
         {
             var decimalPlace = 0;
             while (accuracy < 1)
