@@ -61,6 +61,15 @@ namespace NRoot.ConsoleUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The N-root can&apos;t be calculated!.
+        /// </summary>
+        internal static string HasNotRoot {
+            get {
+                return ResourceManager.GetString("HasNotRoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please enter accuracy.
         /// </summary>
         internal static string Input_Accuracy {
@@ -88,11 +97,38 @@ namespace NRoot.ConsoleUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Calculation by method Math.Pow:.
+        /// </summary>
+        internal static string MathPowMessage {
+            get {
+                return ResourceManager.GetString("MathPowMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N-root is:.
+        /// </summary>
+        internal static string NRootResult {
+            get {
+                return ResourceManager.GetString("NRootResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to N-ROOT CALCULATION.
         /// </summary>
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value is not correct, please try again.
+        /// </summary>
+        internal static string TryAgain {
+            get {
+                return ResourceManager.GetString("TryAgain", resourceCulture);
             }
         }
     }

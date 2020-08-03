@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="HasNotRoot" xml:space="preserve">
+    <value>The N-root can't be calculated!</value>
+    <comment>The N-root can't be calculated specified values</comment>
+  </data>
   <data name="Input.Accuracy" xml:space="preserve">
     <value>Please enter accuracy</value>
     <comment>Introduction to enter accuracy of calculation</comment>
@@ -129,8 +133,20 @@
     <value>Please enter a number</value>
     <comment>Introduction to enter number to calculation of Newton root.</comment>
   </data>
+  <data name="MathPowMessage" xml:space="preserve">
+    <value>Calculation by method Math.Pow:</value>
+    <comment>Calculation by method Math.Pow</comment>
+  </data>
+  <data name="NRootResult" xml:space="preserve">
+    <value>N-root is:</value>
+    <comment>Input result of N-root calculation</comment>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>N-ROOT CALCULATION</value>
     <comment>The title of this  application.</comment>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Value is not correct, please try again</value>
+    <comment>Entered value is not correct</comment>
   </data>
 </root>
