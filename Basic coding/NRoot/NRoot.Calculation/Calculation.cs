@@ -24,11 +24,14 @@ namespace NRoot.Calculation
         public static double GetNRoot(this double number, double root, double accuracy)
         {
             if (accuracy <= 0
-                || root <= 0
+                || root == 0
                 || (root % 2 == 0 && number < 0))
             {
                 return double.NaN;
             }
+
+            var negativeRootFlag = root < 0;
+            root = Math.Abs(root);
 
             //The first approximation of calculation. This is a formula from internet.
             var approx = 1 + ((number - 1) / root);
@@ -47,8 +50,12 @@ namespace NRoot.Calculation
                 approx = nextApprox;
             }
 
+            approx = negativeRootFlag ? 1 / approx : approx;
+
             var subResult = Math.Truncate(approx / accuracy);
-            return Math.Round(subResult * accuracy, GetDecimalPlace(accuracy));
+            var result = Math.Round(subResult * accuracy, GetDecimalPlace(accuracy));
+
+            return result;
         }
 
         /// <summary>
