@@ -47,6 +47,23 @@ namespace NRootCalculation.Test
         }
 
         /// <summary>
+        /// The test of negative root n-root calculate.
+        /// </summary>
+        /// <param name="numberToCalculate">Number to calculate n-root.</param>
+        /// <param name="root">Root value.</param>
+        /// <param name="accuracy">Accuracy of finding the number.</param>
+        /// <param name="expectedNRoot">Expected N-root.</param>
+        [DataTestMethod]
+        [DataRow(12, -2, 0.001, 0.288)]
+        [DataRow(7.8, -1.48, 0.0001, 0.2495)]
+        public void NRoot_NegativeRoot_Test(double numberToCalculate, double root, double accuracy, double expectedNRoot)
+        {
+            var calculatedNRoot = numberToCalculate.GetNRoot(root, accuracy);
+
+            Assert.AreEqual(expectedNRoot, calculatedNRoot);
+        }
+
+        /// <summary>
         /// The test of wrong value - accuracy is negative or zero.
         /// </summary>
         /// <param name="numberToCalculate">Number to calculate n-root.</param>
@@ -71,10 +88,10 @@ namespace NRootCalculation.Test
         /// <param name="root">Root value.</param>
         /// <param name="accuracy">Accuracy of finding the number.</param>
         [DataTestMethod]
-        [DataRow(8, -2, 0.1)]
-        [DataRow(4, -8.3, 0.01)]
-        [DataRow(16, -1, 1)]
-        public void NRoot_NegativeOrZeroRoot_NaN_Test(double numberToCalculate, double root, double accuracy)
+        [DataRow(8, 0, 0.1)]
+        [DataRow(4, 0, 0.01)]
+        [DataRow(16, 0, 1)]
+        public void NRoot_NegativeRoot_NaN_Test(double numberToCalculate, double root, double accuracy)
         {
             var calculatedNRoot = numberToCalculate.GetNRoot(root, accuracy);
 
