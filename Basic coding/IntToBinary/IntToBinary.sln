@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntToBinary.UI", "IntToBina
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntToBinary.Converter", "IntToBinary.Converter\IntToBinary.Converter.csproj", "{C5CABE67-D603-47AF-AE62-382D0830A88E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntToBinaryConverter.Test", "IntToBinaryConverter.Test\IntToBinaryConverter.Test.csproj", "{C7439D59-B897-44D2-8D13-7A27EC64BCA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C5CABE67-D603-47AF-AE62-382D0830A88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5CABE67-D603-47AF-AE62-382D0830A88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5CABE67-D603-47AF-AE62-382D0830A88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7439D59-B897-44D2-8D13-7A27EC64BCA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7439D59-B897-44D2-8D13-7A27EC64BCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7439D59-B897-44D2-8D13-7A27EC64BCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7439D59-B897-44D2-8D13-7A27EC64BCA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
