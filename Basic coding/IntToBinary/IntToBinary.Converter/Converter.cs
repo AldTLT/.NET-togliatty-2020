@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace IntToBinary.Converter
 {
@@ -28,10 +25,13 @@ namespace IntToBinary.Converter
             while (sourceNumber > 0)
             {
                 var bit = sourceNumber % 2;
+
+                // Shift rigth for one bit.
                 sourceNumber >>= 1;
 
                 // Position to insert bit is 0.
                 const int indexOfPosition = 0;
+
                 // Number of digits to insert is 1.
                 const int numberToInsert = 1;
 
