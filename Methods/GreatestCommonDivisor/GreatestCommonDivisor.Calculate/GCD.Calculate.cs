@@ -18,12 +18,62 @@ namespace GreatestCommonDivisor.Calculate
         private const int minValueToCalculate = 1;
 
         /// <summary>
-        /// The method returns the greatest common divisor of two or more Int32 numbers.
+        /// The method returns greatest common divisor of two Int32 numbers using Euclidean algorithm.
+        /// </summary>
+        /// <param name="firstNumber">First number to GCD calculate.</param>
+        /// <param name="secondNumber">Second number to GCD calculate.</param>
+        /// <returns>Greatest common divisor.</returns>
+        public static int Euclidean(int firstNumber, int secondNumber)
+        {
+            return GetGcdEuclidean(firstNumber, secondNumber);
+        }
+
+        /// <summary>
+        /// The method returns greatest common divisor of three Int32 numbers using Euclidean algorithm.
+        /// </summary>
+        /// <param name="firstNumber">First number to GCD calculate.</param>
+        /// <param name="secondNumber">Second number to GCD calculate.</param>
+        /// <param name="thirdNumber">Third number to GCD calculate.</param>
+        /// <returns>Greatest common divisor.</returns>
+        public static int Euclidean(int firstNumber, int secondNumber, int thirdNumber)
+        {
+            return GetGcdEuclidean(firstNumber, secondNumber, thirdNumber);
+        }
+
+        /// <summary>
+        /// The method returns greatest common divisor of four Int32 numbers using Euclidean algorithm.
+        /// </summary>
+        /// <param name="firstNumber">First number to GCD calculate.</param>
+        /// <param name="secondNumber">Second number to GCD calculate.</param>
+        /// <param name="thirdNumber">Third number to GCD calculate.</param>
+        /// <param name="fourthNumber">Fourth number to GCD calculate.</param>
+        /// <returns>Greatest common divisor.</returns>
+        public static int Euclidean(int firstNumber, int secondNumber, int thirdNumber, int fourthNumber)
+        {
+            return GetGcdEuclidean(firstNumber, secondNumber, thirdNumber, fourthNumber);
+        }
+
+        /// <summary>
+        /// The method returns greatest common divisor of five Int32 numbers using Euclidean algorithm.
+        /// </summary>
+        /// <param name="firstNumber">First number to GCD calculate.</param>
+        /// <param name="secondNumber">Second number to GCD calculate.</param>
+        /// <param name="thirdNumber">Third number to GCD calculate.</param>
+        /// <param name="fourthNumber">Fourth number to GCD calculate.</param>
+        /// <param name="fifthNumber">Fifth number to GCD calculate.</param>
+        /// <returns>Greatest common divisor.</returns>
+        public static int Euclidean(int firstNumber, int secondNumber, int thirdNumber, int fourthNumber, int fifthNumber)
+        {
+            return GetGcdEuclidean(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
+        }
+
+        /// <summary>
+        /// The method returns the greatest common divisor of two or more Int32 numbers using Euclidean algorithm.
         /// The method calculates GCD using Euclidean algorithm.
         /// </summary>
         /// <param name="numbers">Numbers to calculate.</param>
         /// <returns>Greatest common divisor of the numbers.</returns>
-        private static int Euclidean(params int[] numbers)
+        private static int GetGcdEuclidean(params int[] numbers)
         {
             if (numbers.Length < minValueNumber)
             {
@@ -69,7 +119,7 @@ namespace GreatestCommonDivisor.Calculate
         /// </summary>
         /// <param name="numbers">Numbers to calculate.</param>
         /// <returns>Greatest common divisor of the numbers.</returns>
-        private static int Binary(params int[] numbers)
+        private static int GetGcdBinary(params int[] numbers)
         {
             if (numbers.Length < minValueNumber)
             {
