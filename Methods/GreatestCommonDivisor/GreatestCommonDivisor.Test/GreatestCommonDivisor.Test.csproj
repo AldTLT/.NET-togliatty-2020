@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CalculateEuclideanTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CalculateBinaryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
