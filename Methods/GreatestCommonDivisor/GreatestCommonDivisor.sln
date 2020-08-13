@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatestCommonDivisor.UI", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatestCommonDivisor.Calculate", "GreatestCommonDivisor.Calculate\GreatestCommonDivisor.Calculate.csproj", "{62D7332C-8238-469E-87FD-F7B3A36B2893}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatestCommonDivisor.Test", "GreatestCommonDivisor.Test\GreatestCommonDivisor.Test.csproj", "{1E8636E0-F4CE-4513-B59B-D0C22BC26F33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{62D7332C-8238-469E-87FD-F7B3A36B2893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62D7332C-8238-469E-87FD-F7B3A36B2893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62D7332C-8238-469E-87FD-F7B3A36B2893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E8636E0-F4CE-4513-B59B-D0C22BC26F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8636E0-F4CE-4513-B59B-D0C22BC26F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8636E0-F4CE-4513-B59B-D0C22BC26F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8636E0-F4CE-4513-B59B-D0C22BC26F33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
