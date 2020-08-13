@@ -114,6 +114,17 @@ namespace GreatestCommonDivisor.Calculate
         }
 
         /// <summary>
+        /// The method returns greatest common divisor of two Int32 numbers using binary algorithm.
+        /// </summary>
+        /// <param name="firstNumber">First number to GCD calculate.</param>
+        /// <param name="secondNumber">Second number to GCD calculate.</param>
+        /// <returns>Greatest common divisor.</returns>
+        public static int Binary(int firstNumber, int secondNumber)
+        {
+            return GetGcdBinary(firstNumber, secondNumber);
+        }
+
+        /// <summary>
         /// The method returns the greatest common divisor of two Int32 numbers.
         /// The method calculates GCD using binary (Stein's) algorithm.
         /// </summary>
