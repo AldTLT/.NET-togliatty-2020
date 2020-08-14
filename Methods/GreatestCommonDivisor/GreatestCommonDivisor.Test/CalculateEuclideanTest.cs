@@ -24,7 +24,7 @@ namespace GreatestCommonDivisor.Test
         [DataRow(83, 83, 0)]
         public void Euclidean_GsdOfTwoNumber_Test(int expectedGcd, int firstNumber, int secondNumber)
         {
-            var calculatedGcd = GcdCalculate.Euclidean(firstNumber, secondNumber);
+            var calculatedGcd = GcdCalculate.GetEuclidean(firstNumber, secondNumber);
 
             Assert.AreEqual(expectedGcd, calculatedGcd);
         }
@@ -45,7 +45,7 @@ namespace GreatestCommonDivisor.Test
         [DataRow(83, 83, 0, 166)]
         public void Euclidean_GsdOfThreeNumber_Test(int expectedGcd, int firstNumber, int secondNumber, int thirdNumber)
         {
-            var calculatedGcd = GcdCalculate.Euclidean(firstNumber, secondNumber, thirdNumber);
+            var calculatedGcd = GcdCalculate.GetEuclidean(firstNumber, secondNumber, thirdNumber);
 
             Assert.AreEqual(expectedGcd, calculatedGcd);
         }
@@ -67,7 +67,7 @@ namespace GreatestCommonDivisor.Test
         [DataRow(83, 83, 0, 166, 0)]
         public void Euclidean_GsdOfFourNumber_Test(int expectedGcd, int firstNumber, int secondNumber, int thirdNumber, int fourthNumber)
         {
-            var calculatedGcd = GcdCalculate.Euclidean(firstNumber, secondNumber, thirdNumber, fourthNumber);
+            var calculatedGcd = GcdCalculate.GetEuclidean(firstNumber, secondNumber, thirdNumber, fourthNumber);
 
             Assert.AreEqual(expectedGcd, calculatedGcd);
         }
@@ -90,7 +90,7 @@ namespace GreatestCommonDivisor.Test
         [DataRow(83, 83, 0, 332, 166, 0)]
         public void Euclidean_GsdOfFourNumber_Test(int expectedGcd, int firstNumber, int secondNumber, int thirdNumber, int fourthNumber, int fifthNumber)
         {
-            var calculatedGcd = GcdCalculate.Euclidean(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
+            var calculatedGcd = GcdCalculate.GetEuclidean(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
 
             Assert.AreEqual(expectedGcd, calculatedGcd);
         }

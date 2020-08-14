@@ -12,19 +12,19 @@ namespace GreatestCommonDivisor.Test
         /// <summary>
         /// Test of Binary greatest common divisor algorithm for two numbers.
         /// </summary>
-        /// <param name="expectedGCD">Expected GCD result.</param>
         /// <param name="firstNUmber">First number to calculate.</param>
         /// <param name="secondNumber">Second number to calculate.</param>
+        /// <param name="expectedGCD">Expected GCD result.</param>
         [DataTestMethod]
-        [DataRow(3, -183, -873243)]
-        [DataRow(73, 5329, 365)]
-        [DataRow(5, -5895, 35)]
-        [DataRow(1, 3455, 6768)]
-        [DataRow(435634, 0, -435634)]
-        [DataRow(83, 83, 0)]
-        public void Euclidean_GsdOfTwoNumber_Test(int expectedGcd, int firstNumber, int secondNumber)
+        [DataRow(-183, -873243, 3)]
+        [DataRow(5329, 365, 73)]
+        [DataRow(-5895, 35, 5)]
+        [DataRow(3455, 6768, 1)]
+        [DataRow(0, -435634, 435634)]
+        [DataRow(83, 0, 83)]
+        public void Euclidean_GsdOfTwoNumber_Test(int firstNumber, int secondNumber, int expectedGcd )
         {
-            var calculatedGcd = GcdCalculate.Binary(firstNumber, secondNumber);
+            var calculatedGcd = GcdCalculate.GetBinary(firstNumber, secondNumber);
 
             Assert.AreEqual(expectedGcd, calculatedGcd);
         }
