@@ -9,7 +9,7 @@ namespace GreatestCommonDivisor.Calculate
     /// <summary>
     /// The class represents methods of greatest common divisor calculate.
     /// </summary>
-    public static class GcdCalculate
+    public static partial class GcdCalculate
     {
         // Minimum number of values to GCD calculate. 
         private const int minValueNumber = 2;
@@ -23,7 +23,7 @@ namespace GreatestCommonDivisor.Calculate
         /// <param name="firstNumber">First number to GCD calculate.</param>
         /// <param name="secondNumber">Second number to GCD calculate.</param>
         /// <returns>Greatest common divisor.</returns>
-        public static int Euclidean(int firstNumber, int secondNumber)
+        public static int GetEuclidean(int firstNumber, int secondNumber)
         {
             return GetGcdEuclidean(firstNumber, secondNumber);
         }
@@ -35,7 +35,7 @@ namespace GreatestCommonDivisor.Calculate
         /// <param name="secondNumber">Second number to GCD calculate.</param>
         /// <param name="thirdNumber">Third number to GCD calculate.</param>
         /// <returns>Greatest common divisor.</returns>
-        public static int Euclidean(int firstNumber, int secondNumber, int thirdNumber)
+        public static int GetEuclidean(int firstNumber, int secondNumber, int thirdNumber)
         {
             return GetGcdEuclidean(firstNumber, secondNumber, thirdNumber);
         }
@@ -48,7 +48,7 @@ namespace GreatestCommonDivisor.Calculate
         /// <param name="thirdNumber">Third number to GCD calculate.</param>
         /// <param name="fourthNumber">Fourth number to GCD calculate.</param>
         /// <returns>Greatest common divisor.</returns>
-        public static int Euclidean(int firstNumber, int secondNumber, int thirdNumber, int fourthNumber)
+        public static int GetEuclidean(int firstNumber, int secondNumber, int thirdNumber, int fourthNumber)
         {
             return GetGcdEuclidean(firstNumber, secondNumber, thirdNumber, fourthNumber);
         }
@@ -62,7 +62,7 @@ namespace GreatestCommonDivisor.Calculate
         /// <param name="fourthNumber">Fourth number to GCD calculate.</param>
         /// <param name="fifthNumber">Fifth number to GCD calculate.</param>
         /// <returns>Greatest common divisor.</returns>
-        public static int Euclidean(int firstNumber, int secondNumber, int thirdNumber, int fourthNumber, int fifthNumber)
+        public static int GetEuclidean(int firstNumber, int secondNumber, int thirdNumber, int fourthNumber, int fifthNumber)
         {
             return GetGcdEuclidean(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
         }
@@ -119,7 +119,7 @@ namespace GreatestCommonDivisor.Calculate
         /// <param name="firstNumber">First number to GCD calculate.</param>
         /// <param name="secondNumber">Second number to GCD calculate.</param>
         /// <returns>Greatest common divisor.</returns>
-        public static int Binary(int firstNumber, int secondNumber)
+        public static int GetBinary(int firstNumber, int secondNumber)
         {
             return GetGcdBinary(firstNumber, secondNumber);
         }
