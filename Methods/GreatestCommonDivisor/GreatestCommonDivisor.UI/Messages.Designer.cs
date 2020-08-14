@@ -106,6 +106,15 @@ namespace GreatestCommonDivisor.UI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Execution time is:.
+        /// </summary>
+        internal static string OutputExecutionTime {
+            get {
+                return ResourceManager.GetString("OutputExecutionTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GREATEST COMMON DIVISOR CALCULATOR..
         /// </summary>
         internal static string Title {

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace GreatestCommonDivisor.UI
 {
+    /// <summary>
+    /// The main class of this application.
+    /// </summary>
     class Program
     {
         /// <summary>
@@ -19,7 +22,10 @@ namespace GreatestCommonDivisor.UI
         /// </summary>
         const int maxAmountToCalculate = 5;
 
-        static void Main(string[] args)
+        /// <summary>
+        /// The main method of this applicvation.
+        /// </summary>
+        static void Main()
         {
             Console.WriteLine(Messages.Title);
             Console.WriteLine(Messages.Intro);
@@ -46,13 +52,50 @@ namespace GreatestCommonDivisor.UI
 
             if (numbers.Length >= minAmountToCalculate && numbers.Length <= maxAmountToCalculate)
             {
-                var gcdEuclidean = GetEuclideanGsd(numbers);
-                Console.WriteLine($"{Messages.OutputEuclidean} {gcdEuclidean}");
+                var gcdEuclidean = 0;
+                var executionTime = new TimeSpan();
+
+                switch (numbers.Length)
+                {
+                    case 2:
+                        {
+                            gcdEuclidean = GcdCalculate.GetEuclideanWatch(numbers[0], numbers[1], out executionTime);
+                            break;
+                        }
+                    case 3:
+                        {
+                            gcdEuclidean = GcdCalculate.GetEuclidean(numbers[0], numbers[1], numbers[2]);
+                            break;
+                        }
+                    case 4:
+                        {
+                            gcdEuclidean = GcdCalculate.GetEuclidean(numbers[0], numbers[1], numbers[2], numbers[3]);
+                            break;
+                        }
+                    case 5:
+                        {
+                            gcdEuclidean = GcdCalculate.GetEuclidean(numbers[0], numbers[1], numbers[2], numbers[3], numbers[4]);
+                            break;
+                        }
+                    default:
+                        {
+                            throw new IndexOutOfRangeException();
+                        }
+                }
+
+                Console.WriteLine($"\n{Messages.OutputEuclidean} {gcdEuclidean}");
+
+                if (numbers.Length == 2)
+                {
+                    Console.WriteLine($"{Messages.OutputExecutionTime} {executionTime}");
+                }
                 
+
                 if (numbers.Length == minAmountToCalculate)
                 {
-                    var gcdBinary = GcdCalculate.Binary(numbers[0], numbers[1]);
-                    Console.WriteLine($"{Messages.OutputBinary} {gcdBinary}");
+                    var gcdBinary = GcdCalculate.GetBinaryWatch(numbers[0], numbers[1], out executionTime);
+                    Console.WriteLine($"\n{Messages.OutputBinary} {gcdBinary}");
+                    Console.WriteLine($"{Messages.OutputExecutionTime} {executionTime}");
                 }
             }
             else
@@ -62,32 +105,5 @@ namespace GreatestCommonDivisor.UI
 
             Console.ReadKey();
         }
-
-        private static int GetEuclideanGsd(int[] arrayNumbers)
-        {
-            switch (arrayNumbers.Length)
-            {
-                case 2:
-                    {                       
-                        return GcdCalculate.Euclidean(arrayNumbers[0], arrayNumbers[1]);
-                    }
-                case 3:
-                    {
-                        return GcdCalculate.Euclidean(arrayNumbers[0], arrayNumbers[1], arrayNumbers[2]);
-                    }
-                case 4:
-                    {
-                        return GcdCalculate.Euclidean(arrayNumbers[0], arrayNumbers[1], arrayNumbers[2], arrayNumbers[3]);
-                    }
-                case 5:
-                    {
-                        return GcdCalculate.Euclidean(arrayNumbers[0], arrayNumbers[1], arrayNumbers[2], arrayNumbers[4]);
-                    }
-                default:
-                    {
-                        throw new IndexOutOfRangeException();
-                    }
-            }
-        } 
     }
 }
