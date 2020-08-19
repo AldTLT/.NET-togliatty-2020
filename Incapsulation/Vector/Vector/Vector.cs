@@ -103,5 +103,40 @@ namespace Vector
 
             return new Vector(divX, divY, divZ);
         }
+
+        /// <summary>
+        /// Метод возвращает строковое представление вектора.
+        /// </summary>
+        /// <returns>Строковое представление вектора.</returns>
+        public override string ToString()
+        {
+            return $"X:{this.X} Y:{this.Y} Z:{this.Z}";
+        }
+
+        /// <summary>
+        /// Метод определяет эквивалентен ли объект экземпляру Vector.
+        /// </summary>
+        /// <param name="obj">Объект для проверки на эквивалентность.</param>
+        /// <returns>true если объект - Vector и имеет те же значения, иначе - false.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            var vectorToEqual = obj as Vector;
+
+            return X == vectorToEqual.X && Y == vectorToEqual.Y && Z == vectorToEqual.Z;
+        }
+
+        /// <summary>
+        /// Метод возвращает хэш-код вектора.
+        /// </summary>
+        /// <returns>Хэш-код вектора.</returns>
+        public override int GetHashCode()
+        {
+            return this.ToString().GetHashCode();
+        }
     }
 }
