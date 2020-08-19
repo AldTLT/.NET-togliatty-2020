@@ -73,5 +73,35 @@ namespace Vector
         {
             return vector + number;
         }
+
+        /// <summary>
+        /// Метод возвращает результат вычитания двух векторов.
+        /// </summary>
+        /// <param name="vector1">Уменьшаемый вектор.</param>
+        /// <param name="vector2">Вычитаемый вектор.</param>
+        /// <returns>Вектор, являющийся разностью двух векторов.</returns>
+        public static Vector operator -(Vector vector1, Vector vector2)
+        {
+            var divX = vector1.X - vector2.X;
+            var divY = vector1.Y - vector2.Y;
+            var divZ = vector1.Z - vector2.Z;
+
+            return new Vector(divX, divY, divZ);
+        }
+
+        /// <summary>
+        /// Метод возвращает результат вычитания числа из вектора.
+        /// </summary>
+        /// <param name="vector">Уменьшаемый вектор.</param>
+        /// <param name="number">Число которое вычитается из вектора.</param>
+        /// <returns>Вектор, являющийся разностью вектора с числом.</returns>
+        public static Vector operator -(Vector vector, double number)
+        {
+            var divX = vector.X - number;
+            var divY = vector.Y - number;
+            var divZ = vector.Z - number;
+
+            return new Vector(divX, divY, divZ);
+        }
     }
 }
