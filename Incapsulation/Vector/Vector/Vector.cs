@@ -1,10 +1,18 @@
-﻿namespace Vector
+﻿using System;
+
+namespace Vector
 {
     /// <summary>
     /// Класс Вектор.
     /// </summary>
     public class Vector
     {
+        /// <summary>
+        /// Кол-во разрядов после запятой, до которого округляются координаты в результате операйций.
+        /// Значение выбрано произвольно.
+        /// </summary>
+        const int round = 6;
+
         /// <summary>
         /// Координата X вектора
         /// </summary>
@@ -35,9 +43,9 @@
         /// <returns>Вектор, являющийся суммой двух векторов.</returns>
         public static Vector operator +(Vector vector1, Vector vector2)
         {
-            var sumX = vector1.X + vector2.X;
-            var sumY = vector1.Y + vector2.Y;
-            var sumZ = vector1.Z + vector2.Z;
+            var sumX = Math.Round((vector1.X + vector2.X), round);
+            var sumY = Math.Round((vector1.Y + vector2.Y), round);
+            var sumZ = Math.Round((vector1.Z + vector2.Z), round);
 
             return new Vector(sumX, sumY, sumZ);
         }
@@ -50,9 +58,9 @@
         /// <returns>Вектор, являющийся суммой вектора с числом.</returns>
         public static Vector operator +(Vector vector, double number)
         {
-            var sumX = vector.X + number;
-            var sumY = vector.Y + number;
-            var sumZ = vector.Z + number;
+            var sumX = Math.Round((vector.X + number), round);
+            var sumY = Math.Round((vector.Y + number), round);
+            var sumZ = Math.Round((vector.Z + number), round);
 
             return new Vector(sumX, sumY, sumZ);
         }
@@ -76,9 +84,9 @@
         /// <returns>Вектор, являющийся разностью двух векторов.</returns>
         public static Vector operator -(Vector vector1, Vector vector2)
         {
-            var divX = vector1.X - vector2.X;
-            var divY = vector1.Y - vector2.Y;
-            var divZ = vector1.Z - vector2.Z;
+            var divX = Math.Round((vector1.X - vector2.X), round);
+            var divY = Math.Round((vector1.Y - vector2.Y), round);
+            var divZ = Math.Round((vector1.Z - vector2.Z), round);
 
             return new Vector(divX, divY, divZ);
         }
@@ -91,9 +99,9 @@
         /// <returns>Вектор, являющийся разностью вектора с числом.</returns>
         public static Vector operator -(Vector vector, double number)
         {
-            var divX = vector.X - number;
-            var divY = vector.Y - number;
-            var divZ = vector.Z - number;
+            var divX = Math.Round((vector.X - number), round);
+            var divY = Math.Round((vector.Y - number), round);
+            var divZ = Math.Round((vector.Z - number), round);
 
             return new Vector(divX, divY, divZ);
         }
