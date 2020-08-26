@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector.UI", "Vector.UI\Vect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector", "Vector\Vector.csproj", "{AC2EAE18-4173-4432-8B84-A47B39797447}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector.Test", "Vector.Test\Vector.Test.csproj", "{6BA9CF8B-BA0F-48F7-B4F5-A6ADB12FFFC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AC2EAE18-4173-4432-8B84-A47B39797447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC2EAE18-4173-4432-8B84-A47B39797447}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC2EAE18-4173-4432-8B84-A47B39797447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA9CF8B-BA0F-48F7-B4F5-A6ADB12FFFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA9CF8B-BA0F-48F7-B4F5-A6ADB12FFFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA9CF8B-BA0F-48F7-B4F5-A6ADB12FFFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA9CF8B-BA0F-48F7-B4F5-A6ADB12FFFC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
